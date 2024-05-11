@@ -3,7 +3,7 @@
 ## Project Overview
 MovieMate is an advanced machine learning-based movie recommendation system that provides personalized movie suggestions. Utilizing a collaborative filtering algorithm, MovieMate adapts to user preferences to dynamically enhance recommendation accuracy.
 
-![System Architecture](images/movie.png)
+![System Architecture](movie.png)
 
 ## Features
 - Personalized movie recommendations based on user preferences.
