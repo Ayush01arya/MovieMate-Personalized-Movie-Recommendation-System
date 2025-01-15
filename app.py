@@ -9,7 +9,11 @@ CORS(app)
 
 # Load the saved models
 movies_list = pickle.load(open('movie_list.pkl', 'rb'))
-similarity = pickle.load(open('similarity.pkl', 'rb'))
+import bz2
+
+# Load compressed pickle file
+with bz2.BZ2File('similarity_compressed.pkl', 'rb') as f_in:
+    similarity = pickle.load(f_in)
 
 # Load original dataset for additional movie details
 movies_df = pd.read_csv('DataSets/tmdb_5000_movies.csv')
