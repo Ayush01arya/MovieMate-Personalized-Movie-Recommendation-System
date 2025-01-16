@@ -159,7 +159,7 @@
 
             // Fetch movie list for autocomplete
             try {
-                const response = await fetch('http://localhost:5000/api/movies');
+                const response = await fetch('https://movie-api-cr4a.vercel.app/api/movies');
                 const data = await response.json();
                 data.movies.forEach(movie => {
                     const option = document.createElement('option');
@@ -182,7 +182,7 @@
                 recommendations.classList.add('hidden');
 
                 try {
-                    const response = await fetch('http://localhost:5000/api/recommend', {
+                    const response = await fetch('https://movie-api-cr4a.vercel.app/api/recommend', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({ movie: movieName }),
